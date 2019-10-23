@@ -13,8 +13,8 @@
 
 
 // stepN expands its argument N times
-#define step0(...)
-#define step1(...) __VA_ARGS__
+#define step0
+#define step1(...) step0  __VA_ARGS__
 #define step2(...) step1 (__VA_ARGS__)
 #define step3(...) step2 (__VA_ARGS__)
 #define step4(...) step3 (__VA_ARGS__)

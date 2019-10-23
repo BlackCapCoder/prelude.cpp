@@ -26,8 +26,8 @@
 // Concatenate the two topmost elements on the stack
 // join (1,2) (3,4) == ((1,2),(3,4))
 #define join join_0
-#define join_0(...) ( (__VA_ARGS__),_join_1
-#define join_1(...)   (__VA_ARGS__) )
+#define join_0(...) ((__VA_ARGS__),join_1
+#define join_1(...) (__VA_ARGS__))
 
 // Dual to join
 // cojoin join == id

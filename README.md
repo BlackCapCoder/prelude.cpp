@@ -1,1 +1,1 @@
-The missing standard library for the C preprocessor (cpp).
+This is a standard library for the cpp pre-processor.
