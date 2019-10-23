@@ -1,4 +1,4 @@
 test:
-	cpp -P examples/*.cpp | awk '/./'
+	cat examples/*.cpp | cpp -P | awk '/./'
 
 run: test

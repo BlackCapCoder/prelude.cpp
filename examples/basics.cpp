@@ -1,4 +1,4 @@
-#include "../src/eval.cpp"
+#include "src/eval.cpp"
 
 #define example(...)
 
@@ -64,7 +64,7 @@ example (
 
 // ----------------------
 
-#include "../src/stack.cpp"
+#include "src/stack.cpp"
 
 
 example (

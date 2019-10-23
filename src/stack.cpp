@@ -46,3 +46,11 @@
 // swap swap == id
 #define swap dip pure
 
+
+// Returns its first argument
+// const (1) (2) == (1)
+#define const(...) (__VA_ARGS__) pop
+
+// Flips the arguments of a function
+// exec flip (f) (1) (2) == exec (f) (2) (1)
+#define flip(f) (f swap)
