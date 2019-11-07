@@ -3,6 +3,7 @@
 
 
 #include "eval.cpp"
+#include "function.cpp"
 #include "stack.cpp"
 #include "list.cpp"
 

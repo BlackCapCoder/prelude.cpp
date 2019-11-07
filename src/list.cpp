@@ -1,6 +1,6 @@
 // cons an element onto a list
 // cons (1) (2,3) == (1,2,3)
-#define cons cons_0 join
+#define cons cons_0 join2
 #define cons_0(x,xs) (copure x,copure xs)
 
 // Separates a list into its head and tail. Dual to cons

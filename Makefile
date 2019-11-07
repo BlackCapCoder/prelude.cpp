@@ -1,4 +1,4 @@
 test:
-	cat examples/*.cpp | cpp -P | awk '/./'
+	cat examples/*.cpp | cpp -P -trigraphs | awk '/./'
 
 run: test

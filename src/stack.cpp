@@ -1,7 +1,4 @@
-// The identity function
-// id x == x
-#define id(...) (__VA_ARGS__)
-
+#pragma once
 
 // Delete the topmost element on the stack
 #define pop(...)
@@ -25,9 +22,17 @@
 
 // Concatenate the two topmost elements on the stack
 // join (1,2) (3,4) == ((1,2),(3,4))
+// See wip.cpp if you're having issues
 #define join join_0
 #define join_0(...) ((__VA_ARGS__),join_1
 #define join_1(...) (__VA_ARGS__))
+
+
+#define head(x,...) (x)
+#define tail(_,...) (__VA_ARGS__)
+
+#define isParen(t,f,...) head tail id (exec pop __VA_ARGS__ (,t), f)
+
 
 // Dual to join
 // cojoin join == id
@@ -38,19 +43,10 @@
 // Pop an array and unpack it after the next element on the stack
 // dip (pop) (1) (2) (3) == (1) (3)
 // dip (dup) (1) (2) (3) == (1) (2) (2) (3)
-#define dip dip_0 join
+#define dip dip_0 join2
 #define dip_0(f,x) x copure f
 
 // swap the two topmost elements on the stack
 // swap (1) (2) (3) == (2) (1) (3)
 // swap swap == id
 #define swap dip pure
-
-
-// Returns its first argument
-// const (1) (2) == (1)
-#define const(...) (__VA_ARGS__) pop
-
-// Flips the arguments of a function
-// exec flip (f) (1) (2) == exec (f) (2) (1)
-#define flip(f) (f swap)
